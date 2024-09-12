@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/porsche/device.mk)
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_porsche
+PRODUCT_NAME := lineage_porsche
 PRODUCT_DEVICE := porsche
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -22,6 +22,18 @@ PRODUCT_MODEL := RMX3312
 
 PRODUCT_SYSTEM_NAME := RE58B2L1
 PRODUCT_SYSTEM_DEVICE := RE58B2L1
+
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_USES_OPLUS_CAMERA := true
+# Gapps
+WITH_GAPPS := true
+BLAZE_MAINTAINER := Mister_X
+
+#Gapps include
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
