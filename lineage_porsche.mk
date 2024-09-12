@@ -26,13 +26,10 @@ PRODUCT_SYSTEM_DEVICE := RE58B2L1
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_TOUCHGESTURES := true
 TARGET_HAS_UDFPS := true
-EXTRA_UDFPS_ANIMATIONS := true
 TARGET_USES_OPLUS_CAMERA := true
-# Gapps
-WITH_GAPPS := true
-BLAZE_MAINTAINER := Mister_X
+EXTRA_UDFPS_ANIMATIONS := true
 
-#Gapps include
+#MINDGapps include
 $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
