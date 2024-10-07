@@ -41,7 +41,7 @@ TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 
 # Build GAPPS\Vanilla
-WITH_GAPPS := true\false
+WITH_GAPPS := true
 
 # Quick switch (add more than one Launcher in build)
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
