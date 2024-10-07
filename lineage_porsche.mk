@@ -23,14 +23,29 @@ PRODUCT_MODEL := RMX3312
 PRODUCT_SYSTEM_NAME := RE58B2L1
 PRODUCT_SYSTEM_DEVICE := RE58B2L1
 
+#Deviice Stuf
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_TOUCHGESTURES := true
-TARGET_HAS_UDFPS := true
 TARGET_USES_OPLUS_CAMERA := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_BLUR := true
+
+# Maintainer name for Everest
+EVEREST_MAINTAINER := "Mister_X"
+
+# Adding Blur support
+TARGET_SUPPORTS_BLUR := true
+
+# For UDFPS devices
+TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-#MINDGapps include
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+# Build GAPPS\Vanilla
+WITH_GAPPS := true\false
+
+# Quick switch (add more than one Launcher in build)
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
