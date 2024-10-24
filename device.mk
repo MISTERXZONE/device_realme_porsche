@@ -30,7 +30,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
 #EvolutionX stuff
-TARGET_DISABLE_EPPE := true
+TARGET_DISABLE_EPPE := true    
+TARGET_UDFPS_ANIMATIONS := true
+TARGET_HAS_UDFPS := true
+
+# Enable DeviceAsWebcam support
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
+
 # Camera Oneplus
 $(call inherit-product-if-exists, vendor/oplus/camera/opluscamera.mk)
 
