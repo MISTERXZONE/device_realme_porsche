@@ -12,36 +12,33 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/porsche/device.mk)
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+$(call inherit-product, vendor/flare/config/common_full_phone.mk)
 
-PRODUCT_NAME := blaze_porsche
+PRODUCT_NAME := flare_porsche
 PRODUCT_DEVICE := porsche
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3312
 
-
-
-# Blaze Bringup
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_TOUCHGESTURES := true
-TARGET_USES_OPLUS_CAMERA := true
+# Flare Bringup
+FLARE_BUILD_TYPE := UNOFFICIAL
+FLARE_MAINTAINER := Mister_X
+TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_BLUR := true
-TARGET_UDFPS_ANIMATIONS := true 
-EXTRA_UDFPS_ANIMATIONS := true
+
+# Gapps GAPPS
+WITH_GAPPS := true
+
 #Pixel Launcher Build
 TARGET_INCLUDE_PIXEL_LAUNCHER := true
 
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_STOCK_AICORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-
-
-# Gapps & Maintainer tags
-WITH_GAPPS := true
-BLAZE_MAINTAINER := Mister_X
+# Device Stuff
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+TARGET_USES_OPLUS_CAMERA := true
+TARGET_SUPPORTS_BLUR := true
+TARGET_UDFPS_ANIMATIONS := true 
+EXTRA_UDFPS_ANIMATIONS := true
 
 PRODUCT_SYSTEM_NAME := RE58B2L1
 PRODUCT_SYSTEM_DEVICE := RE58B2L1

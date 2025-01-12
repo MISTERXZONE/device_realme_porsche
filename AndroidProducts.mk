@@ -5,5 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_porsche.mk
+    $(LOCAL_DIR)/flare_porsche.mk
     
